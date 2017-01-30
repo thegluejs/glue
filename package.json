@@ -1,0 +1,30 @@
+{
+  "name": "glue",
+  "version": "1.0.0",
+  "description": "A task runner that works!",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluejs/glue.git"
+  },
+  "keywords": [
+    "gluejs",
+    "glue",
+    "task",
+    "runner"
+  ],
+  "author": "Fábio Luciano <fabioluciano@php.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gluejs/glue/issues"
+  },
+  "homepage": "https://github.com/gluejs/glue#readme",
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "mocha": "^3.2.0",
+    "moment": "^2.17.1"
+  }
+}
