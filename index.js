@@ -3,11 +3,11 @@
 
   glue
     .namespace('build', 'Glob all that build things')
-      .namespace('application', 'Glob all that application things')
-        .namespace('other', 'Glob all that other things')
-          .task('teste', function() {
-            console.log('asdsdsa');
-          });
+      .task('teste', function() {});
+
+  glue
+    .namespace('build', 'Glob all that build things')
+      .task('outro', ['teste']);
 
   // glue.task();
   //
