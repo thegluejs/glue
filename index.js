@@ -9,7 +9,7 @@
     .namespace('build', 'Glob all that build things')
       .task('outro', ['teste']);
 
-  // glue.task();
-  //
+  glue.task('another');
+
   console.log(glue);
 })();
