@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-    "start": "jsdoc lib -r -a all -d api"
+    "generate-api": "jsdoc lib -c config/jsdoc.json"
   },
   "repository": {
     "type": "git",
