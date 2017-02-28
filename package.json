@@ -4,11 +4,12 @@
   "description": "A task runner that works!",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "start": "jsdoc lib -r -a all -d api"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gluejs/glue.git"
+    "url": "git+https://github.com/thegluejs/glue.git"
   },
   "keywords": [
     "gluejs",
@@ -19,12 +20,10 @@
   "author": "Fábio Luciano <fabioluciano@php.net>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gluejs/glue/issues"
+    "url": "https://github.com/thegluejs/glue/issues"
   },
-  "homepage": "https://github.com/gluejs/glue#readme",
+  "homepage": "https://github.com/thegluejs/glue#readme",
   "devDependencies": {
-    "colors": "^1.1.2",
-    "mocha": "^3.2.0",
-    "moment": "^2.17.1"
+    "jsdoc": "latest"
   }
 }
