@@ -1,0 +1,106 @@
+'use strict';
+
+/**
+ * [GlueNamespace]{@link GlueNamespace} namespace of [Glue]{@link Glue} Module
+ *
+ * @module Glue
+ * @namespace GlueNamespace
+ * @requires GlueException
+ * @version 1.0.0
+ */
+
+var
+  util = require('util'),
+  GlueObject = require('./lib/glue/object'),
+  GlueException = require('./lib/glue/exception');
+
+module.exports = function(...args) {
+
+  var runnerInstance = args[0];
+
+  /**
+   *
+   * Register a new namespace in the [instance of Glue]{@link GlueInstance}. The new namespace
+   * needs a [name]{@link GlueNamespace#name}, and a [description]{@link GlueNamespace#description}. If a
+   * [parent namespace]{@link GlueNamespace.parent} is informed, the namespaced will be added into it.
+   *
+   * @constructor
+   * @this {GlueNamespace}
+   * @param {String} name - Name of Namespace
+   * @param {String} [description] - Description of namespace porpose.
+   * @param {GlueNamespace} [parent] - Parent namespace that this are into.
+   * @example
+   *
+   * var namespace = new GlueNamespace(name, description, parent);
+   * namespace.add();
+   */
+  var GlueNamespace = function (name, description, parent) {
+
+    /**
+     * @private
+     * @type {String}
+     * @memberOf GlueNamespace
+     */
+    this.name = name.toLowerCase().trim();
+
+    /**
+     * @private
+     * @type {String|Undefined}
+     */
+    this.description = description.trim() || undefined;
+
+    /**
+     * @private
+     * @type {GlueNamespace}
+     * @memberOf GlueNamespace
+     */
+    this.parent = parent || GlueNamespace;
+
+    /**
+     * @private
+     * @type {Object}
+     * @memberOf GlueNamespace
+     */
+    this.tasks = {};
+
+    return this;
+  };
+
+  /**
+   * @public
+   * @method
+   * @this {GlueNamespace}
+   * @param {string} slug - Slug that will be registered
+   * @return {GlueRunner} A {@link GlueRunner} instance
+   * @example
+   *
+   * this.add();
+   */
+  GlueNamespace.prototype.add = function() {
+    if (!this.isValidName(this.name)) {
+      throw GlueException('The given name is not valid!');
+    }
+
+    if(this.isRegisteredNamespace(this.name)) {
+      throw GlueException('The given name is already registered!')
+    }
+
+    runnerInstance.instance.namespaces.push(this);
+
+    return runnerInstance;
+  };
+
+  /**
+   * @private
+   * @mathod
+   * @this {GlueNamespace}
+   * @param {Object} [filter={}] - An optional filter to be used
+   * @returns {Array}
+   */
+  GlueNamespace.prototype.all = (filter) => {
+    var filter = filter || undefined;
+  };
+
+
+  return new GlueNamespace(args[1], args[2], args[3]);
+};

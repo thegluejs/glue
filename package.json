@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/thegluejs/glue#readme",
   "devDependencies": {
-    "jsdoc": "latest"
+    "jsdoc": "latest",
+    "minami": "^1.1.1"
   }
 }
