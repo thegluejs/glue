@@ -4,16 +4,18 @@
   // glue
 
   glue
-    .namespace('build-teste', 'Glob all that build things')
-    .namespace('build-teste', 'Glob all that build things')
-    // .namespace('builddasda-testssse', 'Glob all that build things')
-      // .task('teste', function() {});
+    .namespace('build', 'Glob all that build things')
+    .task('mimimi', function(){});
+  // .task('mimimi', 'tessss', function(){});
+
+  // glue
+  //   .namespace('build-teste', 'Glob all that build things')
+  //   .task()
+  //   .task('teste', function(){})
+  //   .task('teste', 'descricao', function(){})
+  //   .task('teste', ['namespace'], 'descrição', function(){})
+  //   .task({name: 'object', callback : function(){}});
   //
   // glue
-  //   .namespace('build', 'Glob all that build things')
-  //     .task('outro', ['teste']);
-  //
-  // glue.task('another');
-  //
-  // console.log(glue);
+  //   .task('teste', 'kdslkklsdlksdlk', callback);
 })();

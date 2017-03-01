@@ -5,6 +5,8 @@
     "private": true,
     "recurse": true,
     "verbose": true,
-    "template": "node_modules/minami"
+    "readme" : "readme.md",
+    "template": "node_modules/minami",
+    "tutorials": "./doc/"
   }
 }
